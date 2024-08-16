@@ -1,0 +1,346 @@
+
+/*--------NAV-BAR--------*/
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 2%;
+}
+.logo
+{
+    width: 140px;
+    cursor: pointer;
+}
+.nav-links li
+{
+   list-style: none;
+   display: inline-block;
+    margin: 10px 30px;
+     list-style: none;
+    position: relative;
+}
+.nav-links li a
+{
+       text-decoration: none;
+       color: #000;
+    text-transform: uppercase;
+       
+}
+.nav-links  li a::after{
+     content: '';
+    height: 4px;
+    width: 0;
+    background: #ff5361;
+    position: absolute;
+    left:0;
+    bottom:-10px;
+    transition: 0.4s;
+}
+.nav-links  li a:hover::after{
+    width: 100%;
+}
+.register-btn 
+{
+     background-color:#ed383d ;
+    color: #f1f1f1;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.list-container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.left-col{
+    flex-basis: 70%;
+}
+.right-col{
+    flex-basis: 25%;
+}
+.left-col h1{
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 30px
+}
+.house{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-top: 2px solid #ccc;
+}
+.house-img{
+    flex-basis: 40%;
+}
+.house-info{
+    flex-basis: 58%;
+    color: #555;
+}
+.house-img img{
+    width: 100%;
+    border-radius: 12px;
+}
+.house-info h3{
+    font-weight: 600;
+    color: #333;
+    font-size: 22px;
+    margin: 4px 0;
+}
+.house-info i{
+    color: #ff5361;
+    font-size: 19px;
+    margin: 10px 1px;
+}
+.house-price{
+    text-align: right;
+}
+.house-price h4{
+    font-size: 20px;
+}
+.house-price h4 span{
+    font-size: 15px;
+    font-weight: 500;
+}
+/*------SIDE BAR-----*/
+.side-bar{
+    border: none;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+.side-bar h2{
+    font-weight: 500;
+}
+.side-bar h3{
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+.filter{
+    display: flex;
+    align-items: center;
+    color: #555;
+    margin-bottom: 10px;
+    
+}
+.filter p{
+    flex: 1;
+}
+.filter input{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.filter .fa{
+    color: red;
+} 
+.side-bar-link {
+    text-align: right;
+    margin: 20px 0;
+}
+.side-bar-link a{
+    text-decoration: none;
+    color: ##d98324;
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+.pagination img{
+    width: 15px;
+    margin: 10px 20px;
+}
+.right-arrow{
+    transform: rotate(180deg);
+}
+.pagination span{
+    margin: 10px 0px !important;
+    width: 50px !important;
+    height: 50px;
+    line-height: 50px;
+    text-align: center !important;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pagination .current{
+    background: #333;
+    color: #fff;
+}
+.pagination a{
+    
+    color: #000;
+    margin: 5px;
+}
+
+/*-------for small screen devices
+@media only screen and (max-width:700px){
+    nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 1%;
+}
+    .register-btn 
+{
+     background-color: #ed383d;
+    color: #f1f1f1f1;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+    .list-container{
+    margin-top: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 130%;
+}
+    .left-col{
+    flex-basis: 70%;
+    }
+        .right-col{
+    flex-basis: 10%;
+        
+}
+    .left-col h1{
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0;    
+}
+    .house{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-top: 2px solid #ccc;
+}
+    .house-img{
+    flex-basis: 78%;
+}
+.house-info{
+    flex-basis: 58%;
+    color: #555;
+    
+}
+.house-info h3{
+    font-weight: 700;
+    color: #333;
+    font-size: 18px;
+    margin: 0;
+}
+    
+.house-img img{
+    width: 350px;
+    height: 150px;
+    border-radius: 15px;
+}
+    .house-info i{
+    color: #ff5361;
+    font-size: 25px;
+    margin: 2px 0;
+}
+    .house-price{
+    text-align: left;
+}
+    .side-bar{
+    border: 2px solid #999;
+    padding: 3px 3px;
+    margin-top: 2px;
+      
+}
+    .side-bar h2{
+    font-weight: 500;
+        font-size: 15px;
+        font-family: cursive, sans-serif;
+}
+    .side-bar h3{
+    font-weight: 400;
+    margin: 5px 0 5px;
+        font-family: cursive, sans-serif;
+}
+.filter{
+    display: flex;
+    align-items: center;
+    color: #555;
+    margin-bottom: 5px;
+    font-family: cursive;
+    
+}
+.filter p{
+    flex: 1;
+    font-size: 14px;
+}
+.filter input{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.filter .fa{
+    color: #ff5361;
+} 
+.side-bar-link {
+    text-align: right;
+    margin: 10px 0;
+}
+.side-bar-link a{
+    text-decoration: none;
+    color: #ff5361;
+}
+    .pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+        position: absolute;
+}
+.pagination img{
+    width: 15px;
+    margin: 5px 10px;
+}
+.right-arrow{
+    transform: rotate(180deg);
+}
+.pagination span{
+    margin: 10px 0px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center !important;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pagination .current{
+    background: #333;
+    color: #fff;
+}
+}
+-----*/
+/*------small screen for listing page----*/
+@media only screen and (max-width:700px){
+    .list-container{
+        margin-top: 5px;
+    }
+    .left-col, .right-col, .house-img, .house-info{
+        flex-basis: 80%;  
+    }
+    .left-col h1{
+        font-size: 22px;
+    }
+    .house-info h3{
+        font-size: 18px;
+    }
+    .house-info i{
+        font-size: 22px;
+    }
+    .pagination span{
+        margin: 10px 2px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+    
+}
